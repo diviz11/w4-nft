@@ -1,0 +1,15 @@
+{
+    "attributes" : [ 
+        {
+            "trait_type" : "Breed",
+            "value" : "German Shepherd"
+        }, 
+        {
+            "trait_type" : "Eye color",
+            "value" : "Brown"
+        }
+    ],
+    "description" : "A loyal and intelligent canine companion with a strong protective instinct.",
+    "image" : "https://gateway.pinata.cloud/ipfs/QmdrKgupKt2zCwUCVsHCSpSiTAv9VmoEioDEcR7LGLefZ2",
+    "name" : "Bruno"
+}
