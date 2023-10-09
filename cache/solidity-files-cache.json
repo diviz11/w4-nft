@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/divizakkshat/dev/my-nft/contracts/MyNFT.sol": {
-      "lastModificationDate": 1696777902408,
-      "contentHash": "c07aeb6e70048e0e5f9d5ea7f672a2b7",
+      "lastModificationDate": 1696860986615,
+      "contentHash": "5b31010572f35a77c51017030150356b",
       "sourceName": "contracts/MyNFT.sol",
       "solcConfig": {
         "version": "0.8.6",
@@ -30,6 +30,7 @@
       },
       "imports": [
         "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
         "@openzeppelin/contracts/utils/Counters.sol"
       ],
       "versionPragmas": [
@@ -40,11 +41,11 @@
       ]
     },
     "/Users/divizakkshat/dev/my-nft/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
-      "lastModificationDate": 1696672558240,
-      "contentHash": "42aa79d3fe22b0a94f0e7ecdd061909d",
+      "lastModificationDate": 1696777682437,
+      "contentHash": "5a20b2cad87ddb61c7a3a6af21289e28",
       "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
       "solcConfig": {
-        "version": "0.7.3",
+        "version": "0.8.6",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -67,10 +68,10 @@
         }
       },
       "imports": [
-        "../GSN/Context.sol"
+        "../utils/Context.sol"
       ],
       "versionPragmas": [
-        "^0.7.0"
+        "^0.8.0"
       ],
       "artifacts": [
         "Ownable"

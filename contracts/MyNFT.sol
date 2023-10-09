@@ -7,8 +7,8 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 
 contract MyNFT is ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
-
     Counters.Counter private _tokenIds;
+
     uint256 public maxSupply;
     mapping(uint256 => string) private _tokenImages;
 
@@ -16,9 +16,13 @@ contract MyNFT is ERC721URIStorage, Ownable {
         maxSupply = _maxSupply;
     }
 
-    function mintNFT(address recipient, string memory tokenURI, string memory imageURI) public onlyOwner returns (uint256) {
+    function mintNFT(address recipient, string memory tokenURI, string memory imageURI)
+        public
+        onlyOwner
+        returns (uint256)
+    {
         require(_tokenIds.current() < maxSupply, "Max supply reached");
-        
+
         _tokenIds.increment();
         uint256 newItemId = _tokenIds.current();
         _mint(recipient, newItemId);
@@ -28,7 +32,7 @@ contract MyNFT is ERC721URIStorage, Ownable {
         return newItemId;
     }
 
-    function changeImage(uint256 tokenId, string memory newImageURI) public onlyOwnerOf(tokenId) {
+    function changeImage(uint256 tokenId, string memory newImageURI) public onlyOwner {
         require(tokenId <= _tokenIds.current(), "Token ID does not exist");
         _tokenImages[tokenId] = newImageURI;
     }
